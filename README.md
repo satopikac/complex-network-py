@@ -1,5 +1,9 @@
 # 模拟
 
+本项目实现了复杂网络（包括ER随机网络和SF无标度网络）上博弈中合作的演化。
+
+## 环境要求
+
 程序使用numba库加速计算
 
 运行模拟程序，python版本$\ge$ 3.9，创建环境后运行
@@ -10,14 +14,16 @@ pip install -r requirements.txt
 
 安装所需的依赖包。
 
-要求版本
+依赖包要求版本
 
 ```
   "matplotlib>=3.9.4",
-    "networkx>=3.2.1",
-    "numba>=0.60.0",
-    "numpy>=2.0.2",
+  "networkx>=3.2.1",
+  "numba>=0.60.0",
+  "numpy>=2.0.2",
 ```
+
+## SG_PD
 
 文件sg_pd_simulation.py给出了在两种网络下，SG、PD各自运行结果，
 
@@ -42,9 +48,21 @@ pip install -r requirements.txt
 **查看帮助** ：
 
 ```bash
-   python script.py --help
+   python sg_pd_simulation.py --help
+```
+
+## SG
+
+文件sg_simulation.py给出了网络上仅仅运行sg博弈的结果，仅针对$k=4$情形，根据要求可以修改。
+
+```python
+python sg_simulation.py
 ```
 
 # 绘图
 
-生成的数据使用sgpaint.py绘制，可能需要数据修改文件名。
+生成的数据使用sgpaint.py绘制，可能需要修改数据来源的文件名。
+
+图像生成效果如下
+
+![1749100333617](image/README/1749100333617.png)
