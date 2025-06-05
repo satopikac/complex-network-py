@@ -65,4 +65,4 @@ python sg_simulation.py
 
 图像生成效果如下
 
-![1749100333617](image/README/1749100333617.png)
+![1749100333617](/cooperation_results_pd.png)
