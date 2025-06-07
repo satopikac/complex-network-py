@@ -55,14 +55,17 @@ pip install -r requirements.txt
 
 文件sg_simulation.py给出了网络上仅仅运行sg博弈的结果，仅针对$k=4$情形，根据要求可以修改。
 
-```python
+```bash
 python sg_simulation.py
 ```
 
 # 绘图
 
 生成的数据使用sgpaint.py绘制，可能需要修改数据来源的文件名。
-
+```bash
+python sgpaint.py -i input.csv -o output.png -t result-title
+```
+需要使用参数指定输入数据的位置，输出图像的名称以及图像中间的标题。如不指定后两者，默认使用输入数据的名称。
 图像生成效果如下
 
 ![1749100333617](/cooperation_results_pd.png)
