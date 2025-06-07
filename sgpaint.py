@@ -25,6 +25,7 @@ def read_results(filename):
 def plot_results(b_values, er_values, sf_values, output_file=None, title=None):
     """绘制模拟结果图"""
     plt.figure(figsize=(10, 6))
+    plt.rcParams["font.family"] = "Times New Roman"
     plt.plot(b_values, er_values, "o-", label="ER Network")
     plt.plot(b_values, sf_values, "s-", label="Scale-Free Network")
 
