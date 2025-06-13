@@ -6,7 +6,7 @@
 
 程序使用numba库加速计算
 
-运行模拟程序，python版本$\ge$ 3.9，创建环境后运行
+运行模拟程序，python版本不低于 3.9，创建环境后运行
 
 ```bash
 pip install -r requirements.txt
@@ -66,6 +66,7 @@ python sg_simulation.py
 python sgpaint.py -i input.csv -o output.png -t result-title
 ```
 需要使用参数指定输入数据的位置，输出图像的名称以及图像中间的标题。如不指定后两者，默认使用输入数据的名称。
+
 sgpaint-pretty.py的功能和用法和上面一样，调整了绘图风格更加美观。
 图像生成效果如下
 
