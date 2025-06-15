@@ -30,6 +30,7 @@ def plot_results(b_values, er_values, sf_values, output_file=None, title=None):
     plt.plot(b_values, sf_values, "s-", label="Scale-Free Network")
 
     plt.xlabel("value of b")
+    #plt.xlabel("value of r")  #SG博弈
     plt.ylabel("cooperation frequency")
 
     if title:
