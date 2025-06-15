@@ -59,7 +59,8 @@ def plot_results(b_values, er_values, sf_values, output_file=None, title=None):
     )
     
     # 优化坐标轴与标签
-    plt.xlabel("value of b", fontsize=12)
+    plt.xlabel("value of $b$", fontsize=12)
+    #plt.xlabel("value of $r$", fontsize=12)  #SG博弈
     plt.ylabel("cooperation frequency", fontsize=12)
     
     if title:
