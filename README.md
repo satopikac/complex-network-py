@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ## SG_PD
 
-文件sg_pd_simulation.py给出了在两种网络下，SG、PD各自运行结果，
+文件sg_pd_simulation.py给出了在两种网络下，SG、PD各自运行结果，为了简化程序，对于两种博弈类型的参数b和r，程序中均使用b_values表示。因此存储的数据文件中，b列代表的含义根据博弈类型的不同代表不同参数。
 
 **运行 SG 博弈（默认）** ：
 
