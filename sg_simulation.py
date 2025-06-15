@@ -166,7 +166,7 @@ def main():
     n = 100  # 节点数
     k = 4  # 平均度
 
-    # 只考虑SG博弈类型，收益矩阵参数为b
+    # 只考虑SG博弈类型，收益矩阵参数为r 这里全部使用b代替之
     b_values = np.linspace(0.0, 1.0, 21)[1:]
 
     # 模拟3000代之后，再模拟2000代，求取这2000代的均值
@@ -229,7 +229,7 @@ def main():
         "s-",
         label="Scale-Free Network",
     )
-    plt.xlabel("b value")
+    plt.xlabel("r value")
     plt.ylabel("cooperation frequency")
     plt.title(f"simulation results(z={k})")
     plt.legend()
