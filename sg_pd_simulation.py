@@ -190,10 +190,11 @@ def main():
     # 模拟参数
     n = 400  # 节点数
     k = args.k  # 平均度
+     #这里r和b统一用一个参量b_values表示
     if game_type == "SG":
-        b_values = np.linspace(0.0, 1.0, 21)[1:]  # 调整PD的b范围
+        b_values = np.linspace(0.0, 1.0, 21)[1:]  # 调整SG的r范围
     else:
-        b_values = np.linspace(1.0, 2.0, 21)[1:]
+        b_values = np.linspace(1.0, 2.0, 21)[0:] #调整PD的b范围
     generations = 5000
     transient = 3000
     repeats = 80
@@ -252,7 +253,11 @@ def main():
         "s-",
         label="Scale-Free Network",
     )
-    plt.xlabel("b values")
+    
+    if game_type=="SG":
+        plt.xlabel("$r$ values")
+    else:
+        plt.xlabel("$b$ values")
     plt.ylabel("cooperation frequency")
     plt.title(f"simulation result(z={k}) {title} n={n}")
     plt.legend()
