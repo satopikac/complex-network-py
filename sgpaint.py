@@ -5,7 +5,6 @@ import argparse
 
 
 def read_results(filename):
-    """读取CSV文件中的模拟结果"""
     b_values = []
     er_values = []
     sf_values = []
@@ -23,7 +22,6 @@ def read_results(filename):
 
 
 def plot_results(b_values, er_values, sf_values, output_file=None, title=None):
-    """绘制模拟结果图"""
     plt.figure(figsize=(10, 6))
     plt.rcParams["font.family"] = "Times New Roman"
     plt.plot(b_values, er_values, "o-", label="ER Network")
@@ -58,13 +56,13 @@ def main():
 
     args = parser.parse_args()
 
-    # 读取数据
+   
     b_values, er_values, sf_values = read_results(args.input)
     if args.title == None:
         args.title = args.input
     if args.output == None:
         args.output = args.input.replace(".csv", ".png")
-    # 绘制图表
+  
     plot_results(b_values, er_values, sf_values, args.output, args.title)
 
 
